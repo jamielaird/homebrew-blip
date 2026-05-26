@@ -1,0 +1,26 @@
+cask "blip" do
+  version "0.3.0"
+  sha256 "63706e46cbc6d945bb3a403adb1ed901064344f67f99567b8c054e7098036ee9"
+
+  url "https://github.com/jamielaird/homebrew-blip/releases/download/v#{version}/Blip-#{version}.zip"
+  name "Blip"
+  desc "Menu-bar monitor for healthchecks.io"
+  homepage "https://github.com/jamielaird/blip"
+
+  # Releases that carry the binary live in this tap repo, so check it for
+  # newer versions.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Blip.app"
+
+  # Blip is ad-hoc signed (not notarized). Install with `--no-quarantine`
+  # to skip the one-time Gatekeeper prompt:
+  #   brew install --cask jamielaird/blip/blip --no-quarantine
+
+  zap trash: [
+    "~/Library/Preferences/app.blip.Blip.plist",
+  ]
+end
