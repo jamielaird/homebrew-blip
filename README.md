@@ -9,13 +9,14 @@ lives in a separate (private) repository.
 ## Install
 
 ```sh
-brew install --cask jamielaird/blip/blip --no-quarantine
+brew install --cask jamielaird/blip/blip
 ```
 
-`--no-quarantine` skips the macOS Gatekeeper prompt on first launch. Blip is
-ad-hoc signed but not notarized (it's a free, solo project without a paid Apple
-Developer ID), so without that flag macOS will block the first open and you'd
-need to right-click → Open instead.
+Blip is ad-hoc signed but not notarized (it's a free, solo project without a
+paid Apple Developer ID), so macOS Gatekeeper would normally block the first
+launch. The cask strips the download quarantine on install for you, so it opens
+cleanly on first double-click — no `--no-quarantine` flag or right-click → Open
+needed.
 
 After installing, click the menu-bar glyph → **Settings…** → **Providers** →
 **Add provider** and paste your healthchecks.io API key.
