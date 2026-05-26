@@ -25,12 +25,16 @@ After installing, click the menu-bar glyph → **Settings…** → **Providers**
 
 ```sh
 brew update
-brew upgrade --cask blip
+brew upgrade --cask jamielaird/blip/blip
 ```
 
 ## Uninstall
 
 ```sh
-brew uninstall --cask blip            # remove the app
-brew uninstall --zap --cask blip      # also remove preferences
+brew uninstall --cask jamielaird/blip/blip          # remove the app
+brew uninstall --zap --cask jamielaird/blip/blip    # also remove preferences
 ```
+
+> **Note:** always use the fully-qualified `jamielaird/blip/blip`. An unrelated
+> app of the same name exists in the default Homebrew cask tap, so the bare
+> `blip` token is ambiguous.
