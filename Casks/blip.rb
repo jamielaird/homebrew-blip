@@ -1,6 +1,6 @@
 cask "blip" do
-  version "0.3.5"
-  sha256 "5bfd895328ef9acf0624562f3219d87c3c9b5b7d0d5c17809f8495543c758518"
+  version "0.3.6"
+  sha256 "c0610282eb3a451820e3eb7d7252c45703327603f7987efb0737e7000c41bdb9"
 
   url "https://github.com/jamielaird/homebrew-blip/releases/download/v#{version}/Blip-#{version}.zip"
   name "Blip"
