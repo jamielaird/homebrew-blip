@@ -21,9 +21,9 @@ cask "blip" do
   # Blip is ad-hoc signed (not notarized), so strip the download quarantine
   # after install — otherwise macOS Gatekeeper blocks the first launch. This
   # gives `brew install --cask jamielaird/blip/blip` a clean first open.
-  postflight_steps do
-    run "/usr/bin/xattr",
-        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Blip.app"]
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Blip.app"]
   end
 
   zap trash: "~/Library/Preferences/app.blip.Blip.plist"
